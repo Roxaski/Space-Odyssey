@@ -206,6 +206,9 @@ article .img-container {
     .links ul li a {
         color: var(--font);
     }
+    .links ul li a::before {
+        content: none;
+    }
     .hamburger-menu {
         display: flex;
     }
