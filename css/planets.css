@@ -777,9 +777,4 @@ body {
         max-width: 45%;
     }
 }
-@media screen and (max-width: 654px) and (orientation: landscape) {
-    .solar-system {
-        display: none;
-    }
-}
 /*media query's end*/
