@@ -119,6 +119,9 @@ body {
 /*navbar end*/
 
 /*gallery start*/
+.wrapper {
+    padding-bottom: 2rem;
+}
 .gallery {
     width: 85%;
     height: auto;

@@ -129,6 +129,9 @@ body {
 /*navbar end*/
 
 /*main start*/
+.wrapper {
+    padding-bottom: 2rem;
+}
 /*solar system start*/
 .solar-system {
     display: flex;
@@ -426,7 +429,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
-    margin: 50px auto;
+    margin: 50px auto 0;
     max-width: 1000px;
 }
 .card-contents {
@@ -527,9 +530,6 @@ body {
     opacity: 95%;
 }
 /*planetary cards end*/
-.padding-bottom {
-    padding-bottom: .5rem;
-}
 /*main end*/
 
 /*media query's start*/
