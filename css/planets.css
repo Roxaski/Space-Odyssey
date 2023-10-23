@@ -583,6 +583,17 @@ body {
         transition: 300ms;
         z-index: 10;
     }
+    .card:nth-child(1):hover,
+    .card:nth-child(2):hover,
+    .card:nth-child(3):hover,
+    .card:nth-child(4):hover,
+    .card:nth-child(5):hover,
+    .card:nth-child(6):hover,
+    .card:nth-child(7):hover,
+    .card:nth-child(8):hover,
+    .card:nth-child(9):hover {
+        border: none;
+    }
 }
 @media screen and (max-width: 338px) {
     .solar-system {
@@ -602,7 +613,7 @@ body {
         width: 90%;
     }
 }
-@media screen and (min-width: 339px) and (max-width: 416px) {
+@media screen and (min-width: 339px) and (max-width: 430px) {
     .sun .planet {
         height: 30px;
         width: 30px;
@@ -753,7 +764,7 @@ body {
         line-height: 1.2;
     }
 }
-@media screen and (min-width: 417px) and (max-width: 916px) {
+@media screen and (min-width: 431px) and (max-width: 932px) {
     .title p {
         width: 95%;
         text-align: left;
