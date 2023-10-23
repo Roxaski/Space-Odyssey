@@ -533,6 +533,19 @@ body {
 /*main end*/
 
 /*media query's start*/
+@media (hover: none) and (pointer: coarse) {
+    .card:nth-child(1):hover,
+    .card:nth-child(2):hover,
+    .card:nth-child(3):hover,
+    .card:nth-child(4):hover,
+    .card:nth-child(5):hover,
+    .card:nth-child(6):hover,
+    .card:nth-child(7):hover,
+    .card:nth-child(8):hover,
+    .card:nth-child(9):hover {
+        border: none;
+    }
+}
 @media screen and (max-width: 1368px) and (hover: none) and (pointer: coarse) {
     .no-scroll {
         overflow-y: hidden;
@@ -582,17 +595,6 @@ body {
         pointer-events: none;
         transition: 300ms;
         z-index: 10;
-    }
-    .card:nth-child(1):hover,
-    .card:nth-child(2):hover,
-    .card:nth-child(3):hover,
-    .card:nth-child(4):hover,
-    .card:nth-child(5):hover,
-    .card:nth-child(6):hover,
-    .card:nth-child(7):hover,
-    .card:nth-child(8):hover,
-    .card:nth-child(9):hover {
-        border: none;
     }
 }
 @media screen and (max-width: 338px) {
