@@ -66,6 +66,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 5px;
     transition: 350ms ease all;
+    -webkit-tap-highlight-color: transparent;
 }
 .links ul li a::before {
     content: '';
@@ -95,6 +96,7 @@ body {
     width: 1.25rem;
     background-color: transparent;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     z-index: 15;
 }
 .bars {
