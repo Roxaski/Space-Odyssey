@@ -221,7 +221,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 485px) {
     .img-wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
