@@ -97,7 +97,7 @@ body {
     background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    z-index: 15;
+    z-index: 1;
 }
 .bars {
     position: relative;
@@ -560,7 +560,7 @@ body {
         transform: translateY(-100%);
         transition: 300ms;
         overflow-y: auto;
-        z-index: 15;
+        z-index: 1;
     }
     .links ul li {
         display: flex;
@@ -584,7 +584,6 @@ body {
         opacity: 0;
         pointer-events: none;
         transition: 300ms;
-        z-index: 10;
     }
     .card:nth-child(1):hover,
     .card:nth-child(2):hover,

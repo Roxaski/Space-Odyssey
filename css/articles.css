@@ -98,7 +98,7 @@ body {
     background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    z-index: 15;
+    z-index: 1;
 }
 .bars {
     position: relative;
@@ -201,7 +201,7 @@ article .img-container {
         transform: translateY(-100%);
         transition: 300ms;
         overflow-y: auto;
-        z-index: 15;
+        z-index: 1;
     }
     .links ul li {
         display: flex;
@@ -225,7 +225,6 @@ article .img-container {
         opacity: 0;
         pointer-events: none;
         transition: 300ms;
-        z-index: 10;
     }
 }
 @media screen and (max-width: 430px) {
