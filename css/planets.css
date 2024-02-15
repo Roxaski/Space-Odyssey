@@ -442,7 +442,8 @@ body {
 .card {
     margin: 0 auto;
     width: 320px;
-    height: 450px;
+    height: auto;
+    line-height: 1.5;
     color: var(--font);
     border: var(--border) 2px solid;
     transition: 250ms ease-in-out;
@@ -609,9 +610,7 @@ body {
         padding: 1.5rem;
     }
     .card {
-        margin: 0 auto;
         width: 100%;
-        height: auto;
     }
     .card p {
         opacity: 85%;
@@ -757,7 +756,7 @@ body {
     }
     .card {
         margin: 0 auto;
-        width: 90%;
+        max-width: 350px;
     }
     .card p {
         opacity: 85%;
