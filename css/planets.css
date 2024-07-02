@@ -764,10 +764,12 @@ body {
         line-height: 1.2;
     }
 }
-@media screen and (max-width: 405px) {
+@media screen and (max-width: 450px) {
     .solar-system {
         display: none;
     }
+}
+@media screen and (max-width: 405px) {
     .title p {
         width: 90%;
         text-align: left;
