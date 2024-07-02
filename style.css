@@ -141,12 +141,13 @@ body {
     position: relative;
     color: var(--font);
     border: solid 2px var(--font);
+    font-size: clamp(1rem, 3vw, 2rem);
     text-align: center;
     font-weight: 400;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin: 100px auto;
-    padding: 1.5rem;
+    padding: 2.5rem;
 }
 /*main end*/
 
@@ -216,6 +217,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .logo h1 {
+        padding: 1.5rem;
+        line-height: 1.8;
     }
 }
 @media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) {
