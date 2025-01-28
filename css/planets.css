@@ -409,9 +409,9 @@ body {
 /*solar system end*/
 
 /*title start*/
-.title h1,
-.title p {
+.title h1 {
     text-align: center;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -420,9 +420,6 @@ body {
     line-height: 1.8;
     margin: 30px auto 0;
     color: var(--font);
-}
-.title h1 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 /*title end*/
 
@@ -447,7 +444,6 @@ body {
     color: var(--font);
     border: var(--border) 2px solid;
     transition: 250ms ease-in-out;
-    cursor: pointer;
 }
 .card:nth-child(1):hover {
     border: var(--mercury) 2px solid;
@@ -601,10 +597,6 @@ body {
     }
 }
 @media screen and (max-width: 1057px) {
-    .title p {
-        width: 95%;
-        text-align: left;
-    }
     .planetary-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -768,12 +760,11 @@ body {
     .solar-system {
         display: none;
     }
+    .title h1 {
+        margin: 70px auto 40px;
+    }
 }
 @media screen and (max-width: 405px) {
-    .title p {
-        width: 90%;
-        text-align: left;
-    }
     .planetary-cards {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
@@ -782,10 +773,6 @@ body {
     .card {
         margin: 0 auto;
         width: 90%;
-    }
-    .title h1 {
-        margin: 70px auto 0;
-        width: 85%;
     }
 }
 @media screen and (orientation: landscape) and (max-width: 845px) {
