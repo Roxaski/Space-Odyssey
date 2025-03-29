@@ -156,7 +156,7 @@ body {
     letter-spacing: 3px;
 }
 /* media query's */
-@media screen and (max-width: 1368px) and (hover: none) and (pointer: coarse) {
+@media screen and (max-width: 1135px) {
     .no-scroll {
         position: fixed;
         overflow-y: hidden;
