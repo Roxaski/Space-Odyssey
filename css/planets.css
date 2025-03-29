@@ -45,6 +45,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     cursor: default;
 }
+.wrapper {
+    max-width: 90rem;
+    padding-bottom: 2rem;
+}
+.wrapper.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+.wrapper.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
 /* nav */
 .links {
     display: flex;
@@ -118,15 +128,6 @@ body {
 }
 .bars::after {
     transform: translateY(4px);
-}
-.wrapper.active .hamburger-menu .bars::before {
-    transform: translateY(0) rotate(45deg);
-}
-.wrapper.active .hamburger-menu .bars::after {
-    transform: translateY(0) rotate(-45deg);
-}
-.wrapper {
-    padding-bottom: 2rem;
 }
 /* solar system */
 .solar-system {

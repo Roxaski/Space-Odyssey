@@ -35,6 +35,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     cursor: default;
 }
+.wrapper {
+    max-width: 90rem;
+    padding-bottom: 2rem;
+}
+.wrapper.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+.wrapper.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
 @keyframes fadeOnLoad {
     0% {
         opacity: 0;
@@ -119,16 +129,7 @@ body {
 .bars::after {
     transform: translateY(4px);
 }
-.wrapper.active .hamburger-menu .bars::before {
-    transform: translateY(0) rotate(45deg);
-}
-.wrapper.active .hamburger-menu .bars::after {
-    transform: translateY(0) rotate(-45deg);
-}
 /* main */
-.wrapper {
-    padding-bottom: 2rem;
-}
 article {
     color: var(--font);
 }

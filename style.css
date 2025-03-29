@@ -36,6 +36,15 @@ body {
     overflow: hidden;
     cursor: default;
 }
+.wrapper {
+    max-width: 90rem;
+}
+.wrapper.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+.wrapper.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
 /* background */
 .bg img {
     position: absolute;
@@ -43,6 +52,7 @@ body {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    max-width: 90rem;
 }
 .mobile-bg img {
     display: none;
@@ -121,12 +131,6 @@ body {
 .bars::after {
     transform: translateY(4px);
 }
-.wrapper.active .hamburger-menu .bars::before {
-    transform: translateY(0) rotate(45deg);
-}
-.wrapper.active .hamburger-menu .bars::after {
-    transform: translateY(0) rotate(-45deg);
-}
 /* main */
 .logo {
     display: inline-block;
@@ -146,6 +150,13 @@ body {
 }
 /* media query's */
 @media screen and (max-width: 1280px) and (hover: none) and (pointer: coarse) {
+    .wrapper.active .links {
+        transform: translateX(0);
+    }
+    .wrapper.active .overlay {
+        opacity: 1;
+        pointer-events: all;
+    }
     .no-scroll {
         position: fixed;
         overflow-y: hidden;
@@ -160,13 +171,6 @@ body {
         object-fit: cover;
         width: 100%;
         height: 100%;
-    }
-    .wrapper.active .links {
-        transform: translateX(0);
-    }
-    .wrapper.active .overlay {
-        opacity: 1;
-        pointer-events: all;
     }
     .links {
         display: flex;
