@@ -123,8 +123,17 @@ body {
 .gallery {
     width: 85%;
     height: auto;
-    margin: 80px auto 0;
+    margin: 0 auto;
     max-width: 1400px;
+}
+.gallery h1 {
+    text-align: center;
+    margin: 70px auto 40px;
+    text-transform: uppercase;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--font);
 }
 .img-wrapper {
     display: grid;
