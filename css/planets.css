@@ -474,7 +474,6 @@ body {
                 0 0 20px var(--neptune);
 }
 .card img {
-    display: block;
     height: auto;
     width: 100%;
     text-align: center;

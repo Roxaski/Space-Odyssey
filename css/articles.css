@@ -161,7 +161,6 @@ article .img-container {
     padding: 0 1.1rem;
 }
 .img-container img {
-    display: block;
     height: auto;
     width: 100%;
     border: var(--font) solid 1px;

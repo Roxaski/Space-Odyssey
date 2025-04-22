@@ -132,7 +132,6 @@ body {
     gap: .8rem;
 }
 .img-wrapper img {
-    display: block;
     border: var(--font) solid 1px;
     width: 100%;
     height: auto;
