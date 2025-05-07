@@ -12,11 +12,13 @@
     <meta name="description" content="Space Odyssey | Check out the beauty of space in our gallery">
     <meta name="theme-color" content="#ffffff">
     <title>Space Odyssey | Gallery dedicated to the beauty of space and travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/gallery.css"></link>
     <script defer src="../script.js"></script>
+    <script defer src="../scripts/gallery.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -41,108 +43,97 @@
         <!-- main -->
         <main>
             <div class="gallery">
-                
                 <h1>gallery</h1>
 
-                <div class="img-wrapper">
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-1.webp" alt="twilight starry night sky">
-                        <div class="overlay">
-                            <p>
-                                starry night
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-2.webp" alt="rocket ship taking off">
-                        <div class="overlay">
-                            <p>
-                                rocket launch
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-3.webp" alt="close up of astronaut">
-                        <div class="overlay">
-                            <p>
-                                astronaut
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-4.webp" alt="astronaut on the moon rover">
-                        <div class="overlay">
-                            <p>
-                                moon rover
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-5.webp" alt="green aurora borealis">
-                        <div class="overlay">
-                            <p>
-                                aurora borealis
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-6.webp" alt="satellite">
-                        <div class="overlay">
-                            <p>
-                                satellite 
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-7.webp" alt="earth and a satellite">
-                        <div class="overlay">
-                            <p>
-                                planet earth
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-8.webp" alt="the first moon landing ">
-                        <div class="overlay">
-                            <p>
-                                moon landing
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-9.webp" alt="galaxy">
-                        <div class="overlay">
-                            <p>
-                                galaxy
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-10.webp" alt="side profile of an astronaut">
-                        <div class="overlay">
-                            <p>
-                                space cadet
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-11.webp" alt="pink nebula in space">
-                        <div class="overlay">
-                            <p>
-                                nebula
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img-container">
-                        <img draggable="false" src="../assets/gallery/gallery-12.webp" alt="astronaut outside space station">
-                        <div class="overlay">
-                            <p>
-                                space station
-                            </p>
-                        </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-1.webp" alt="night sky stars">
+                    <div class="description">
+                        <p>starry night</p>
                     </div>
                 </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-2.webp" alt="rocket blasting off">
+                    <div class="description">
+                        <p>rocket launch</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-3.webp" alt="astronaut">
+                    <div class="description">
+                        <p>astronaut</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-4.webp" alt="moon rover">
+                    <div class="description">
+                        <p>moon rover</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-5.webp" alt="aurora borealis">
+                    <div class="description">
+                        <p>aurora borealis</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-6.webp" alt="weather satellite">
+                    <div class="description">
+                        <p>weather satellite</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-7.webp" alt="earth satellite">
+                    <div class="description">
+                        <p>earth satellite</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-8.webp" alt="moon landing">
+                    <div class="description">
+                        <p>moon landing</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-9.webp" alt="galaxy">
+                    <div class="description">
+                        <p>galaxy</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-10.webp" alt="space cadet">
+                    <div class="description">
+                        <p>space cadet</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-11.webp" alt="nebula">
+                    <div class="description">
+                        <p>nebula</p>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img draggable="false" width="1920" height="1080" src="../assets/gallery/gallery-12.webp" alt="international space station">
+                    <div class="description">
+                        <p>space station</p>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="lightbox">
+
+                <img draggable="false" src="" alt="">
+    
+                <div role="button" aria-label="previous image" class="previous btn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+    
+                <div role="button" aria-label="next image" class="next btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="gallery-overlay"></div>
         </main>
     </div>
 </body>
