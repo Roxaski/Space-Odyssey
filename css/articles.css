@@ -133,7 +133,7 @@ body {
 article {
     color: var(--font);
 }
-article h1 {
+article h2 {
     text-align: center;
     margin: 70px auto 40px;
     text-transform: uppercase;
