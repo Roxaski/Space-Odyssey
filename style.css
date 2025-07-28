@@ -14,18 +14,6 @@
 :root {
     --background: #090917;
     --font: #f3eeee;
-    --scrollbar: #e8e5e5;
-}
-/* scrollbar */
-::-webkit-scrollbar {
-    width: .5rem;
-}
-::-webkit-scrollbar-track {
-    background: var(--background);
-}
-::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar);
-    border-radius: 15px;
 }
 /* focus */
 a:focus {
