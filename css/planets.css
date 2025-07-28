@@ -847,7 +847,11 @@ body {
         display: none;
     }
     .title h1 {
-        margin: 70px auto 40px;
+       margin: 60px auto 0;
+    }
+    .planetary-cards {
+        margin: 50px;
+        padding: 0;
     }
     .color-key {
         display: none;
