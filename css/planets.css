@@ -533,63 +533,63 @@ body {
     border: var(--mercury) 2px solid;
     box-shadow: 0 0 2px var(--mercury),
                 0 0 5px var(--mercury),
-                0 0 10px var(--mercury),
+                0 0 15px var(--mercury),
                 0 0 20px var(--mercury);
 }
 .card:nth-child(2):hover {
     border: var(--venus) 2px solid;
     box-shadow: 0 0 2px var(--venus),
                 0 0 5px var(--venus),
-                0 0 10px var(--venus),
+                0 0 15px var(--venus),
                 0 0 20px var(--venus);
 }
 .card:nth-child(3):hover {
     border: var(--earth) 2px solid;
     box-shadow: 0 0 2px var(--earth),
                 0 0 5px var(--earth),
-                0 0 10px var(--earth),
+                0 0 15px var(--earth),
                 0 0 20px var(--earth);
 }
 .card:nth-child(4):hover {
     border: var(--mars) 2px solid;
     box-shadow: 0 0 2px var(--mars),
                 0 0 5px var(--mars),
-                0 0 10px var(--mars),
+                0 0 15px var(--mars),
                 0 0 20px var(--mars);
 }
 .card:nth-child(5):hover {
     border: var(--sun) 2px solid;
     box-shadow: 0 0 2px var(--sun),
                 0 0 5px var(--sun),
-                0 0 10px var(--sun),
+                0 0 15px var(--sun),
                 0 0 20px var(--sun);
 }
 .card:nth-child(6):hover {
     border: var(--jupiter) 2px solid;
     box-shadow: 0 0 2px var(--jupiter),
                 0 0 5px var(--jupiter),
-                0 0 10px var(--jupiter),
+                0 0 15px var(--jupiter),
                 0 0 20px var(--jupiter);
 }
 .card:nth-child(7):hover {
     border: var(--saturn) 2px solid;
     box-shadow: 0 0 2px var(--saturn),
                 0 0 5px var(--saturn),
-                0 0 10px var(--saturn),
+                0 0 15px var(--saturn),
                 0 0 20px var(--saturn);
 }
 .card:nth-child(8):hover {
     border: var(--uranus) 2px solid;
     box-shadow: 0 0 2px var(--uranus),
                 0 0 5px var(--uranus),
-                0 0 10px var(--uranus),
+                0 0 15px var(--uranus),
                 0 0 20px var(--uranus);
 }
 .card:nth-child(9):hover {
     border: var(--neptune) 2px solid;
     box-shadow: 0 0 2px var(--neptune),
                 0 0 5px var(--neptune),
-                0 0 10px var(--neptune),
+                0 0 15px var(--neptune),
                 0 0 20px var(--neptune);
 }
 .card img {
