@@ -140,11 +140,11 @@ body {
     transform: translateY(4px);
 }
 /* main */
-.logo {
+.title {
     display: inline-block;
-    margin: 100px 100px;
+    margin: 200px 100px;
 }
-.logo h1 {
+.title h1 {
     position: relative;
     color: var(--font);
     border: solid 2px var(--font);
@@ -218,18 +218,18 @@ body {
         pointer-events: none;
         transition: 300ms;
     }
-    .logo {
+    .title {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .logo h1 {
+    .title h1 {
         padding: 1.5rem;
         line-height: 1.8;
     }
 }
 @media screen and (orientation: landscape) {
-    .logo h1 {
+    .title h1 {
         margin: 0 auto;
     }
 }
