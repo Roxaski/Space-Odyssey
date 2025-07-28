@@ -150,7 +150,7 @@ body {
 .gallery .img-container .description {
     position: absolute;
     bottom: 0;
-    border: solid 2px var(--font);
+    border: solid 1.5px var(--font);
     color: var(--font);
     background: var(--background);
     text-align: center;
