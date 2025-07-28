@@ -26,7 +26,7 @@
     --neptune: #0072a8;
     --scrollbar: #e8e5e5;
 }
-/* scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: .5rem;
 }
@@ -37,7 +37,7 @@
     background-color: var(--scrollbar);
     border-radius: 15px;
 }
-/* focus */
+/* Focus */
 a:focus {
     outline: var(--font) 1px solid;
     padding: .5rem;
@@ -63,7 +63,7 @@ body {
 .wrapper.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
-/* nav */
+/* Nav */
 .links {
     display: flex;
     align-items: center;
@@ -137,7 +137,7 @@ body {
 .bars::after {
     transform: translateY(4px);
 }
-/* solar system */
+/* Solar System */
 .solar-system {
     display: flex;
     align-items: center;
@@ -383,7 +383,7 @@ body {
         transform: rotate(360deg) translate(225px);
     }
 }
-/* title */
+/* Title */
 .title h1 {
     text-align: center;
     font-size: clamp(1.1rem, 3vw, 1.5rem);
@@ -396,7 +396,7 @@ body {
     margin: 30px auto 0;
     color: var(--font);
 }
-/* planetary cards */
+/* Planetary Cards */
 .planetary-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -501,7 +501,7 @@ body {
     margin: 0 auto;
     opacity: 95%;
 }
-/* media query's start */
+/* Media Query's Start */
 @media screen and (max-width: 1135px) {
     .no-scroll {
         position: fixed;
@@ -744,13 +744,13 @@ body {
         width: 90%;
     }
 }
-@media screen and (orientation: landscape) and (max-width: 845px) {
-    .solar-system {
-        display: none;
-    }
-}
 @media screen and (orientation: landscape) and (max-width: 935px) {
     .links ul li {
         padding: 1.1rem;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 845px) {
+    .solar-system {
+        display: none;
     }
 }
