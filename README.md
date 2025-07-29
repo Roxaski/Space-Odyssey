@@ -1,6 +1,7 @@
 # Space Odyssey 
 
-![Space_Odyssey](https://github.com/user-attachments/assets/95ea2d22-ea7c-4a04-a686-ecc7824bb820)
+<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/cfbc4801-3e3a-4efe-8c85-cebd49e819d3" />
+
 
 ## Welcome to Space Odyssey
 
