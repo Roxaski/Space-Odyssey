@@ -865,7 +865,7 @@ body {
     }
     .card {
         margin: 0 auto;
-        width: 90%;
+        width: 80%;
     }
 }
 @media screen and (orientation: landscape) and (max-width: 935px) {
