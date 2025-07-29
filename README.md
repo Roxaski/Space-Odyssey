@@ -13,4 +13,4 @@ If anyone has any feedback i would greatly appreciate, as i'm currently learning
 
 ## Image Credits 
 
-An enormous thankyou to [Nasa](https://unsplash.com/@nasa) for officialy uploading a whole bunch of images to be publicly used via [unsplash](https://unsplash.com/), it's been an honour to be able to use official images in my work.
+An massive thankyou to [Nasa](https://unsplash.com/@nasa) for uploading official images via [unsplash](https://unsplash.com/), it's been an honour to be able to use official images in my work.
