@@ -216,3 +216,8 @@ body {
         line-height: 1.8;
     }
 }
+@media screen and (orientation: landscape) and (max-width: 950px) {
+    .title {
+        margin: 100px auto;
+    }
+}
