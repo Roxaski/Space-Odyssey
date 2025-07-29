@@ -141,7 +141,6 @@ body {
     font-weight: 400;
     letter-spacing: 5px;
     text-transform: uppercase;
-    margin: 100px auto;
     padding: 2.5rem;
 }
 /* Media Query's */
@@ -212,12 +211,8 @@ body {
         align-items: center;
     }
     .title h1 {
+        margin: 0 auto;
         padding: 1.5rem;
         line-height: 1.8;
-    }
-}
-@media screen and (orientation: landscape) {
-    .title h1 {
-        margin: 0 auto;
     }
 }
