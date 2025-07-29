@@ -602,7 +602,7 @@ body {
 .card h2 {
     text-align: center;
     text-transform: capitalize;
-    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
     letter-spacing: 1px;
     font-weight: 400;
     margin: .5rem auto;
