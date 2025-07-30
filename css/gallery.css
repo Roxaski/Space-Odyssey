@@ -138,7 +138,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-size: clamp(1.1rem, 3vw, 1.5rem);
-    margin: 40px auto;
+    margin: 45px auto;
     font-weight: 400;
     letter-spacing: 3px;
     color: var(--font);
@@ -162,25 +162,32 @@ body {
 .gallery img {
     width: 100%;
     height: auto;
-    border: 1.5px solid var(--font);
-    color: var(--font);
+    color: var(--background);
+    border: solid var(--font) 1.5px;
     cursor: pointer;
 }
 .lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: auto;
     width: 100%;
-    max-width: 800px;
+    height: auto;
+    max-width: 600px;
     z-index: 3;
 }
 .lightbox img {
     display: none;
-    width: 100%;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
     height: auto;
-    border: 1.5px solid var(--font);
+    object-fit: contain;
+    border: solid var(--font) 1.5px;
+    cursor: default;
 }
 .lightbox img.active {
     display: block;
@@ -208,6 +215,9 @@ body {
     height: 100%;
     background: var(--background);
     z-index: 2;
+}
+.overlay.active {
+    display: block;
 }
 /* Media Query's */
 @media screen and (max-width: 1135px) {
@@ -270,10 +280,6 @@ body {
     }
     .gallery .img-container .description {
         padding: .35rem;
-    }
-    .lightbox img {
-        max-width: 90%;
-        margin: 0 auto;
     }
     .lightbox .btn i {
         display: none;

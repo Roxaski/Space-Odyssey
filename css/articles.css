@@ -172,9 +172,6 @@ article .img-container {
     height: auto;
     width: 100%;
     border: var(--font) solid 1px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .75px;
 }
 /* media query's */
 @media screen and (max-width: 1135px) {

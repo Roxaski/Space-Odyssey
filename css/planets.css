@@ -596,7 +596,6 @@ body {
 .card img {
     height: auto;
     width: 100%;
-    text-align: center;
     letter-spacing: .75px;
 }
 .card h2 {
