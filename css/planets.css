@@ -527,7 +527,7 @@ body {
     height: auto;
     line-height: 1.8;
     color: var(--font);
-    border: var(--border) 2px solid;
+    border: var(--font) 2px solid;
     transition: 250ms ease-in-out;
 }
 .card:nth-child(1):hover {
