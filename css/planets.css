@@ -13,8 +13,8 @@
 }
 :root {
     --background: #090917;
+    --orbit: #575353;
     --font: #f3eeee;
-    --border: #949393;
     --sun: #cc6723;
     --mercury: #e5dcdc;
     --venus: #737ede;
@@ -165,7 +165,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 110px;
@@ -193,7 +193,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 160px;
@@ -221,7 +221,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 205px;
@@ -249,7 +249,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 250px;
@@ -277,7 +277,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 300px;
@@ -305,7 +305,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 350px;
@@ -333,7 +333,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 400px;
@@ -360,7 +360,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--font) solid 2px;
+    border: var(--orbit) solid 2px;
     opacity: 80%;
     border-radius: 100%;
     width: 450px;
@@ -527,7 +527,7 @@ body {
     height: auto;
     line-height: 1.8;
     color: var(--font);
-    border: var(--font) 2px solid;
+    border: var(--orbit) 2px solid;
     transition: 250ms ease-in-out;
 }
 .card:nth-child(1):hover {
@@ -671,7 +671,7 @@ body {
     .card:nth-child(7):hover,
     .card:nth-child(8):hover,
     .card:nth-child(9):hover {
-        border: var(--border) solid 2px;
+        border: var(--font) solid 2px;
         box-shadow: none;
     }
 }
