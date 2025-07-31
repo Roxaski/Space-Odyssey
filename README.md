@@ -1,7 +1,6 @@
 # Space Odyssey 
 
-<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/398b0f42-64a4-4501-b877-319a0bdacd22" />
-
+<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/9f5bc10f-3a62-40aa-a7f8-3ff04d694bb6" />
 
 ## Welcome to Space Odyssey
 
