@@ -13,7 +13,7 @@
 }
 :root {
     --background: #090917;
-    --orbit: #575353;
+    --orbit: #434044;
     --font: #ebe4e4;
     --card: #000000;
     --sun: #cc6723;
@@ -560,6 +560,7 @@ body {
     .sun {
         width: 30px;
         height: 30px;
+        margin-top: 5px;
     }
     .mercury-orbit {
         width: 70px;
@@ -707,8 +708,8 @@ body {
 }
 @media screen and (max-width: 350px) {
     .sun {
-        width: 20px;
-        height: 20px;
+        width: 27px;
+        height: 27px;
     }
     .mercury-orbit {
         width: 60px;
@@ -809,8 +810,8 @@ body {
 }
 @media screen and (max-width: 315px) {
     .sun {
-        width: 18px;
-        height: 18px;
+        width: 22px;
+        height: 22px;
     }
     .mercury-orbit {
         width: 50px;
