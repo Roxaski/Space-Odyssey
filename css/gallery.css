@@ -160,7 +160,7 @@ body {
     padding: .5rem;
     width: 100%;
 }
-.gallery img {
+.gallery .img-container img {
     width: 100%;
     height: auto;
     color: var(--background);
