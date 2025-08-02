@@ -156,6 +156,7 @@ body {
     border-radius: 50px;
     width: 40px;
     height: 40px;
+    opacity: 80%;
     box-shadow: 0 0 10px var(--sun),
                 0 0 20px var(--sun),
                 0 0 60px var(--sun),
