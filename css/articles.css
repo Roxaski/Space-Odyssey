@@ -13,7 +13,8 @@
 }
 :root {
     --background: #090917;
-    --font: #f3eeee;
+    --font: #ebe4e4;
+    --border: #bab6b6;
     --scrollbar: #e8e5e5;
 }
 /* scrollbar */
@@ -152,7 +153,7 @@ article h2 {
 article p {
     margin: 10px auto;
     padding: 1rem 1rem 0 1rem;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 article .research-list ul {
     list-style: disc;
@@ -171,7 +172,7 @@ article .img-container {
 .img-container img {
     height: auto;
     width: 100%;
-    border: var(--font) solid 1.5px;
+    border: var(--border) solid 1.5px;
 }
 /* media query's */
 @media screen and (max-width: 1135px) {

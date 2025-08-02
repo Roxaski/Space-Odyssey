@@ -13,7 +13,8 @@
 }
 :root {
     --background: #090917;
-    --font: #f3eeee;
+    --font: #ebe4e4;
+    --border: #bab6b6;
     --scrollbar: #e8e5e5;
 }
 /* Scrollbar */
@@ -150,11 +151,11 @@ body {
 .gallery .img-container .description {
     position: absolute;
     bottom: 0;
-    border: solid 1.5px var(--font);
+    border: solid 1.5px var(--border);
     color: var(--font);
     background: var(--background);
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: clamp(.9rem, 3vw, 1rem);
     padding: .5rem;
     width: 100%;
