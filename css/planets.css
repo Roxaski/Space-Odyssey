@@ -15,6 +15,7 @@
     --background: #090917;
     --orbit: #575353;
     --font: #ebe4e4;
+    --card: #000000;
     --sun: #cc6723;
     --mercury: #e5dcdc;
     --venus: #737ede;
@@ -527,6 +528,7 @@ body {
     height: auto;
     line-height: 1.8;
     color: var(--font);
+    background: var(--card);
     border: var(--orbit) 2px solid;
     transition: 250ms ease-in-out;
 }
@@ -601,6 +603,7 @@ body {
 .card h2 {
     text-align: center;
     text-transform: capitalize;
+    color: var(--font);
     font-size: clamp(1.2rem, 3vw, 1.4rem);
     letter-spacing: 1px;
     font-weight: 400;
@@ -671,7 +674,7 @@ body {
     .card:nth-child(7):hover,
     .card:nth-child(8):hover,
     .card:nth-child(9):hover {
-        border: var(--font) solid 2px;
+        border: var(--orbit) solid 2px;
         box-shadow: none;
     }
 }
