@@ -155,7 +155,7 @@ body {
     color: var(--font);
     background: var(--background);
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: clamp(.9rem, 3vw, 1rem);
     padding: .5rem;
     width: 100%;
