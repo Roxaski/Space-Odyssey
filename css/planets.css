@@ -570,11 +570,14 @@ body {
     .earth,
     .mars,
     .jupiter,
-    .saturn,
     .uranus,
     .neptune {
         width: 15px;
         height: 15px;
+    }
+    .saturn {
+        width: 30px;
+        height: 30px;
     }
     @keyframes mercury-orbit {
         0% {
@@ -682,12 +685,9 @@ body {
 }
 @media screen and (max-width: 450px) {
     .solar-system {
-        margin: 100px auto 0;
+        margin: 75px auto 0;
         transform: scale(0.9);
         transform-origin: center;
-    }
-    .title h1 {
-       margin: 60px auto 0;
     }
     .planetary-cards {
         margin: 50px;
@@ -713,17 +713,6 @@ body {
     .mercury-orbit {
         width: 60px;
         height: 60px;
-    }
-    .mercury,
-    .venus,
-    .earth,
-    .mars,
-    .jupiter,
-    .saturn,
-    .uranus,
-    .neptune {
-        width: 13px;
-        height: 13px;
     }
     @keyframes mercury-orbit {
         0% {
@@ -832,11 +821,14 @@ body {
     .earth,
     .mars,
     .jupiter,
-    .saturn,
     .uranus,
     .neptune {
-        width: 11px;
-        height: 11px;
+        width: 13px;
+        height: 13px;
+    }
+    .saturn {
+        width: 25px;
+        height: 25px;
     }
     @keyframes mercury-orbit {
         0% {
