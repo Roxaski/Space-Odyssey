@@ -498,15 +498,6 @@ body {
     .hamburger-menu {
         display: flex;
     }
-    .overlay {                               
-        display: block;
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, .7);
-        opacity: 0;
-        pointer-events: none;
-        transition: 300ms;
-    }
     .card:nth-child(1):hover,
     .card:nth-child(2):hover,
     .card:nth-child(3):hover,

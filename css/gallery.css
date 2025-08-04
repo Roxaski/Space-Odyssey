@@ -134,6 +134,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: .8rem;
     padding: 1.5rem;
+    transition: opacity 200ms ease-out;
+}
+.gallery.active {
+    opacity: 0;
 }
 .gallery h1 {
     text-align: center;
@@ -237,9 +241,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: fixed;
         top: 0;
         right: 0;
-        position: fixed;
         height: 100%;
         width: 100%;
         background-color: var(--background);
@@ -261,15 +265,6 @@ body {
     }
     .hamburger-menu {
         display: flex;
-    }
-    nav .overlay {                               
-        display: block;
-        position: fixed;
-        inset: 0;
-        background-color: rgba(0, 0, 0, .7);
-        opacity: 0;
-        pointer-events: none;
-        transition: 300ms;
     }
 }
 @media screen and (max-width: 865px) {
