@@ -134,7 +134,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: .8rem;
     padding: 1.25rem;
-    transition: opacity 200ms ease-out;
+    transition: opacity 100ms ease-out;
 }
 .gallery.active {
     opacity: 0;
@@ -191,7 +191,6 @@ body {
     width: auto;
     height: auto;
     object-fit: contain;
-    border: solid var(--font) 1.5px;
     cursor: default;
 }
 .lightbox img.active {

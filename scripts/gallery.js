@@ -127,7 +127,7 @@ window.addEventListener('resize', () => {
         // added active class to gallery to help with flickering during resize
         gallery.classList.add('active');
 
-        // re-render image then show the content after a short delay (200ms) set by the timeout below
+        // re-render image then show the content after a short delay set by the timeout below
         timeoutID = setTimeout(() => {
             imagePreview();
 
@@ -135,7 +135,7 @@ window.addEventListener('resize', () => {
             requestAnimationFrame(() => {
                 gallery.classList.remove('active');
             });
-        }, 200); // 200ms delay before the next resize can happen
+        }, 100); // 100ms delay before the next resize can happen
     }
 });
 
