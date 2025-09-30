@@ -27,7 +27,6 @@
     --neptune: #0072a8;
     --scrollbar: #e8e5e5;
 }
-/* Scrollbar */
 ::-webkit-scrollbar {
     width: .5rem;
 }
@@ -38,7 +37,6 @@
     background-color: var(--scrollbar);
     border-radius: 15px;
 }
-/* Focus */
 a:focus {
     outline: var(--font) 1px solid;
     padding: .5rem;
@@ -64,7 +62,6 @@ body {
 .wrapper.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
-/* Nav */
 .links {
     display: flex;
     align-items: center;
@@ -138,7 +135,6 @@ body {
 .bars::after {
     transform: translateY(4px);
 }
-/* Solar System */
 .solar-system {
     display: flex;
     align-items: center;
@@ -338,7 +334,6 @@ body {
         transform: rotate(360deg) translate(225px);
     }
 }
-/* Title */
 .title h1 {
     text-align: center;
     font-size: clamp(1.1rem, 3vw, 1.5rem);
@@ -351,7 +346,6 @@ body {
     margin: 30px auto 0;
     color: var(--font);
 }
-/* Planetary Cards */
 .planetary-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -456,7 +450,6 @@ body {
     padding: .25rem;
     margin: 0 auto;
 }
-/* Media Query's Start */
 @media screen and (max-width: 1135px) {
     .no-scroll {
         position: fixed;
