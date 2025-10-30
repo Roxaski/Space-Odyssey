@@ -1,7 +1,7 @@
 const gallery = document.querySelector('.gallery');
 const galleryImgs = document.querySelectorAll('.gallery img');
 const lightbox = document.querySelector('.lightbox img');
-const lightboxSizes = '90vw';
+const lightboxSizes = '(max-width: 865px) 90vw, 600px';
 const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
 const overlay = document.querySelector('.gallery-overlay');

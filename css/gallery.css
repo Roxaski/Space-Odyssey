@@ -202,10 +202,10 @@ body {
     cursor: pointer;
 }
 .lightbox .previous {
-    left: -45%;
+    left: -4rem;
 }
 .lightbox .next {
-    right: -45%;
+    right: -4rem;
 }
 .gallery-overlay {
     display: none;
@@ -218,11 +218,6 @@ body {
 }
 .overlay.active {
     display: block;
-}
-@media screen and (max-width: 1180px) {
-    .lightbox .btn i {
-        display: none;
-    }
 }
 @media screen and (max-width: 1135px) {
     .no-scroll {
@@ -275,6 +270,9 @@ body {
     }
     .gallery .img-container .description {
         padding: .35rem;
+    }
+    .lightbox .btn i {
+        display: none;
     }
 }
 @media screen and (max-width: 585px) {
