@@ -6,7 +6,7 @@ Ever wondered about space and everything that it encapsulates? Then wonder no fu
 
 ## Credits 
 
-An massive thankyou to [Nasa](https://unsplash.com/@nasa) for uploading official images via [unsplash](https://unsplash.com/), it's been an honour to be able to use official images in my work.
+An massive thankyou to [Nasa](https://unsplash.com/@nasa) for uploading official images via [unsplash](https://unsplash.com/), it's been an honour to be able to use official images in my project.
 
 
 ## Feedback 
