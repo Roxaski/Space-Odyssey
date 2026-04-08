@@ -58,6 +58,7 @@ function openLightBox(e) {
             img.setAttribute('tabIndex', '-1');
         });
 
+        // only displays the lightbox buttons once the lightbox img is loaded
         lightbox.onload = lightboxBtns;
     };
 };
