@@ -12,10 +12,11 @@
     box-sizing: border-box;
 }
 :root {
-    --background: #090917;
+    --darkNavy: #090917;
+    --white: #ebe4e4;
+    --offWhite: #e8e5e5;
+    --black: #000007;
     --orbit: #434044;
-    --font: #ebe4e4;
-    --card: #000007;
     --sun: #cc6723;
     --mercury: #e5dcdc;
     --venus: #737ede;
@@ -25,30 +26,27 @@
     --saturn: #868261;
     --uranus: #b6d2ef;
     --neptune: #0072a8;
-    --scrollbar: #e8e5e5;
 }
 ::-webkit-scrollbar {
     width: .5rem;
 }
 ::-webkit-scrollbar-track {
-    background: var(--background);
+    background: var(--darkNavy);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar);
+    background-color: var(--offWhite);
     border-radius: 15px;
 }
 a:focus {
-    outline: var(--font) 1px solid;
-    padding: .5rem;
+    outline: var(--white) 2px solid;
 }
 a:focus:not(:focus-visible) {
     outline: none;
-    padding: 0;
 }
 body {
     width: 100%;
     height: 100vh;
-    background-color: var(--background);
+    background-color: var(--darkNavy);
     font-family: 'Montserrat', sans-serif;
     cursor: default;
 }
@@ -56,10 +54,10 @@ body {
     max-width: 90rem;
     padding-bottom: 2rem;
 }
-.wrapper.active .hamburger-menu .bars::before {
+nav.active .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
 }
-.wrapper.active .hamburger-menu .bars::after {
+nav.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
 .links {
@@ -74,11 +72,10 @@ body {
 }
 .links ul li a {
     position: relative;
-    color: var(--font);
+    color: var(--white);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 5px;
-    transition: 350ms ease all;
     -webkit-tap-highlight-color: transparent;
 }
 .links ul li a::before {
@@ -88,15 +85,12 @@ body {
     left: 50%;
     width: 0;
     height: 1px;
-    background-color: var(--font);
-    transition: 350ms ease;
+    background-color: var(--white);
+    transition: width 350ms ease, left 350ms ease;
 }
 .links ul li a:hover::before {
     width: 100%;
     left: 0;
-}
-.links ul li a:visited {
-    color: var(--font);
 }
 .hamburger-menu {
     display: none;
@@ -108,8 +102,9 @@ body {
     height: 2rem;
     width: 1.25rem;
     background-color: transparent;
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    border: none;
+    cursor: pointer;
     z-index: 1;
 }
 .bars {
@@ -126,8 +121,8 @@ body {
     width: 100%;
     height: 70%;
     border-radius: 5px;
-    background-color: var(--font);
-    transition: 350ms ease;
+    background-color: var(--white);
+    transition: transform 350ms ease;
 }
 .bars::before {
     transform: translateY(-4px);
@@ -344,7 +339,7 @@ body {
     width: 100%;
     line-height: 1.8;
     margin: 30px auto 0;
-    color: var(--font);
+    color: var(--white);
 }
 .planetary-cards {
     display: grid;
@@ -364,10 +359,10 @@ body {
     width: 320px;
     height: auto;
     line-height: 1.8;
-    color: var(--font);
-    background: var(--card);
+    color: var(--white);
+    background: var(--black);
     border: var(--orbit) 2px solid;
-    transition: 250ms ease-in-out;
+    transition: box-shadow 250ms ease-in-out, border-color 250ms ease-in-out;
 }
 .card:nth-child(1):hover {
     border: var(--mercury) 2px solid;
@@ -440,7 +435,7 @@ body {
 .card h2 {
     text-align: center;
     text-transform: capitalize;
-    color: var(--font);
+    color: var(--white);
     font-size: clamp(1.2rem, 3vw, 1.4rem);
     letter-spacing: 1px;
     font-weight: 400;
@@ -455,12 +450,10 @@ body {
         position: fixed;
         overflow-y: hidden;
     }
-    .wrapper.active .links {
-        transform: translateX(0);
-    }
-    .wrapper.active .overlay {
-        opacity: 1;
-        pointer-events: all;
+    nav.active .links {
+        transform: translate(0);
+        visibility: visible;
+        transition: transform 350ms ease, visibility 0s;
     }
     .links {
         display: flex;
@@ -471,9 +464,10 @@ body {
         position: fixed;
         height: 100%;
         width: 100%;
-        background-color: var(--background);
+        background-color: var(--darkNavy);
         transform: translateY(-100%);
-        transition: 300ms;
+        transition: transform 300ms;
+        visibility: hidden;
         overflow-y: auto;
         z-index: 1;
     }
@@ -483,7 +477,7 @@ body {
         padding: 1.75rem;
     }
     .links ul li a {
-        color: var(--font);
+        color: var(--white);
     }
     .links ul li a::before {
         content: none;

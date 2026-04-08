@@ -12,33 +12,31 @@
     box-sizing: border-box;
 }
 :root {
-    --background: #090917;
-    --font: #ebe4e4;
-    --border: #bab6b6;
-    --scrollbar: #e8e5e5;
+    --darkNavy: #090917;
+    --white: #ebe4e4;
+    --grey: #bab6b6;
+    --offWhite: #e8e5e5;
 }
 ::-webkit-scrollbar {
     width: .5rem;
 }
 ::-webkit-scrollbar-track {
-    background: var(--background);
+    background: var(--darkNavy);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar);
+    background-color: var(--offWhite);
     border-radius: 15px;
 }
 a:focus {
-    outline: var(--font) 1px solid;
-    padding: .5rem;
+    outline: var(--white) 2px solid;
 }
 a:focus:not(:focus-visible) {
     outline: none;
-    padding: 0;
 }
 body {
     width: 100%;
     height: 100vh;
-    background-color: var(--background);
+    background-color: var(--darkNavy);
     font-family: 'Montserrat', sans-serif;
     cursor: default;
 }
@@ -46,10 +44,10 @@ body {
     max-width: 90rem;
     padding-bottom: 2rem;
 }
-.wrapper.active .hamburger-menu .bars::before {
+nav.active .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
 }
-.wrapper.active .hamburger-menu .bars::after {
+nav.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
 .links {
@@ -64,11 +62,10 @@ body {
 }
 .links ul li a {
     position: relative;
-    color: var(--font);
+    color: var(--white);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 5px;
-    transition: 350ms ease all;
     -webkit-tap-highlight-color: transparent;
 }
 .links ul li a::before {
@@ -78,15 +75,12 @@ body {
     left: 50%;
     width: 0;
     height: 1px;
-    background-color: var(--font);
-    transition: 350ms ease;
+    background-color: var(--white);
+    transition: width 350ms ease, left 350ms ease;
 }
 .links ul li a:hover::before {
     width: 100%;
     left: 0;
-}
-.links ul li a:visited {
-    color: var(--font);
 }
 .hamburger-menu {
     display: none;
@@ -98,8 +92,9 @@ body {
     height: 2rem;
     width: 1.25rem;
     background-color: transparent;
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    border: none;
+    cursor: pointer;
     z-index: 1;
 }
 .bars {
@@ -116,8 +111,8 @@ body {
     height: 70%;
     width: 100%;
     border-radius: 5px;
-    background-color: var(--font);
-    transition: 350ms ease;
+    background-color: var(--white);
+    transition: transform 350ms ease;
 }
 .bars::before {
     transform: translateY(-4px);
@@ -142,7 +137,7 @@ body {
     margin: 45px auto;
     font-weight: 400;
     letter-spacing: 3px;
-    color: var(--font);
+    color: var(--white);
     grid-column: span 3;
 }
 .gallery .img-container {
@@ -151,9 +146,9 @@ body {
 .gallery .img-container .description {
     position: absolute;
     bottom: 0;
-    border: solid 1.5px var(--border);
-    color: var(--font);
-    background: var(--background);
+    border: solid 1.5px var(--grey);
+    color: var(--white);
+    background: var(--darkNavy);
     text-align: center;
     text-transform: uppercase;
     font-size: clamp(.9rem, 3vw, 1rem);
@@ -161,10 +156,12 @@ body {
     width: 100%;
 }
 .gallery .img-container img {
+    display: block;
     width: 100%;
     height: auto;
-    color: var(--background);
-    border: solid var(--font) 1.5px;
+    color: var(--darkNavy);
+    border: solid 2px var(--grey);
+    contain: layout;
     cursor: pointer;
 }
 .lightbox {
@@ -180,7 +177,16 @@ body {
     max-width: 600px;
     z-index: 3;
 }
-.lightbox img {
+.lightbox-no-scroll {
+    overflow: hidden;
+    pointer-events: none;
+}
+.lightbox-no-scroll .lightbox,
+.lightbox-no-scroll .lightbox img,
+.lightbox-no-scroll .overlay {
+    pointer-events: auto;
+}
+.lightbox > img {
     display: none;
     max-width: 90vw;
     max-height: 85vh;
@@ -189,47 +195,58 @@ body {
     object-fit: contain;
     cursor: default;
 }
-.lightbox img.active {
+.lightbox > img.active {
     display: block;
 }
 .lightbox .btn {
-    display: none;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 3rem;
-    color: var(--font);
+    background: transparent;
+    border: none;
+    color: var(--white);
     cursor: pointer;
+    visibility: hidden;
+    pointer-events: none;
+}
+.lightbox .btn.active {
+    visibility: visible;
+    pointer-events: auto;
+}
+.lightbox .btn .chevron {
+    width: 5rem;
+    height: auto;
 }
 .lightbox .previous {
-    left: -4rem;
+    left: -14rem;
 }
 .lightbox .next {
-    right: -4rem;
+    right: -14rem;
 }
 .gallery-overlay {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     position: fixed;
     inset: 0;
     width: 100%;
     height: 100%;
-    background: var(--background);
+    background: var(--darkNavy);
+    transition: opacity 150ms ease;
     z-index: 2;
 }
-.overlay.active {
-    display: block;
+.gallery-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 @media screen and (max-width: 1135px) {
     .no-scroll {
         position: fixed;
         overflow-y: hidden;
     }
-    .wrapper.active .links {
-        transform: translateX(0);
-    }
-    .wrapper.active .overlay {
-        opacity: 1;
-        pointer-events: all;
+    nav.active .links {
+        transform: translate(0);
+        visibility: visible;
+        transition: transform 350ms ease, visibility 0s;
     }
     .links {
         display: flex;
@@ -240,9 +257,10 @@ body {
         right: 0;
         height: 100%;
         width: 100%;
-        background-color: var(--background);
+        background-color: var(--darkNavy);
         transform: translateY(-100%);
-        transition: 300ms;
+        transition: transform 300ms;
+        visibility: hidden;
         overflow-y: auto;
         z-index: 1;
     }
@@ -252,13 +270,23 @@ body {
         padding: 1.75rem;
     }
     .links ul li a {
-        color: var(--font);
+        color: var(--white);
     }
     .links ul li a::before {
         content: none;
     }
     .hamburger-menu {
         display: flex;
+    }
+}
+@media screen and (max-width: 1060px) {
+    .lightbox img {
+        max-width: 90vw;
+        height: auto;
+        margin: 0 auto;
+    }
+    .lightbox .btn {
+        display: none;
     }
 }
 @media screen and (max-width: 865px) {
@@ -271,9 +299,6 @@ body {
     .gallery .img-container .description {
         padding: .35rem;
     }
-    .lightbox .btn i {
-        display: none;
-    }
 }
 @media screen and (max-width: 585px) {
     .gallery {
@@ -285,9 +310,14 @@ body {
 }
 @media screen and (orientation: landscape) and (max-width: 960px) {
     .lightbox {
-        width: 80%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: auto;
     }
-    .lightbox .btn i {
+    .lightbox .btn {
         display: none;
     }
 }
