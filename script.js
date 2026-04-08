@@ -1,12 +1,30 @@
-let wrapper = document.querySelector('.wrapper');
-let menu = document.querySelector('.hamburger-menu');
+const nav = document.querySelector('nav');
+const links = document.querySelector('.links');
+const menu = document.querySelector('.hamburger-menu');
+const main = document.querySelector('main');
 
-//opens hamburger menu
-menu.addEventListener('click', () => {
-    wrapper.classList.toggle('active')
-});
-
-//disable scroll when nav menu is open
-menu.addEventListener('click', () => {
+menu.addEventListener('click', toggleHamburgerMenu);
+// toggles the hamburger menu, along with disabling scroll when menu is open
+function toggleHamburgerMenu() {
+    nav.classList.toggle('active');
+    const active = nav.classList.contains('active');
     document.body.classList.toggle('no-scroll');
-});
+    
+     // if the these elements exists, it prevents them from being focused
+    if (main) {
+        main.inert = active;
+    };
+
+    if (active) {
+        document.addEventListener('keydown', escapeKeyPress);
+    } else {
+        document.removeEventListener('keydown', escapeKeyPress);
+        menu.focus();
+    };
+};
+
+function escapeKeyPress(e) {
+    if (e.key === 'Escape') {
+        toggleHamburgerMenu();
+    };
+};
