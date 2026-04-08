@@ -29,27 +29,12 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="bg">
-            <img width="1920" height="1080" draggable="false" 
-            src="./assets/index/bg_extra_large.webp"
-            srcset="./assets/index/bg_large.webp 1200w,
-                    ./assets/index/bg_extra_large.webp 1920w"
-            sizes="(min-width: 1136px) 100vw"
-            alt="planet earth">
-        </div>
-
-        <div class="mobile-bg">
-            <img width="1920" height="1080" draggable="false" 
-            src="./assets/index/mobile_bg_large.webp" 
-            srcset="./assets/index/mobile_bg_small.webp 480w,
-                    ./assets/index/mobile_bg_medium.webp 800w,
-                    ./assets/index/mobile_bg_large.webp 1200w"
-            sizes="(max-width: 1135px) 100vw"
-            alt="planet earth">
-        </div>
-
         <header>
             <nav>
+                <button class="hamburger-menu" aria-label="opens navigation menu">
+                    <span class="bars"></span>
+                </button>
+                
                 <div class="links">
                     <ul>
                         <li><a href="./pages/planets.html">planets</a></li>
@@ -59,13 +44,30 @@
                     </ul>
                 </div>
 
-                <div aria-label="opens navigation menu" role="button" class="hamburger-menu">
-                    <div class="bars"></div>
-                </div>
-
                 <div class="overlay"></div>
             </nav>
         </header>
+
+        <div class="bg">
+            <img width="1920" height="1080" draggable="false" 
+            src="./assets/index/bg_extra_large.webp"
+            srcset="./assets/index/bg_large.webp 1200w,
+                    ./assets/index/bg_extra_large.webp 1920w"
+            sizes="(min-width: 1136px)
+                   100vw"
+            alt="planet earth">
+        </div>
+
+        <div class="mobile-bg">
+            <img width="1920" height="1080" draggable="false" 
+            src="./assets/index/mobile_bg_large.webp" 
+            srcset="./assets/index/mobile_bg_small.webp 480w,
+                    ./assets/index/mobile_bg_medium.webp 800w,
+                    ./assets/index/mobile_bg_large.webp 1200w"
+            sizes="(max-width: 1135px)
+                   100vw"
+            alt="planet earth">
+        </div>
         
         <div class="title">
             <h1>space odyssey</h1>
