@@ -25,7 +25,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
     <link rel="stylesheet" href="../css/gallery.css">
-    <script defer async src="https://kit.fontawesome.com/2d21b2aa33.js" crossorigin="anonymous"></script>
     <script defer src="../script.js"></script>
     <script defer src="../scripts/gallery.js"></script>
 </head>
@@ -33,6 +32,10 @@
     <div class="wrapper">
         <header>
             <nav>
+                <button class="hamburger-menu" aria-label="opens navigation menu">
+                    <span class="bars"></span>
+                </button>
+                
                 <div class="links">
                     <ul>
                         <li><a href="../index.html">home</a></li>
@@ -41,10 +44,6 @@
                         <li><a href="./history.html">history</a></li>
                         <li><a href="./research.html">research</a></li>
                     </ul>
-                </div>
-
-                <div aria-label="opens navigation menu" role="button" class="hamburger-menu">
-                    <div class="bars"></div>
                 </div>
 
                 <div class="overlay"></div>
@@ -262,13 +261,17 @@
 
             <div class="lightbox">
                 <img draggable="false" src="" alt="">
-    
-                <div role="button" aria-label="previous image" class="previous btn">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
-    
-                <div role="button" aria-label="next image" class="next btn">
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <button class="previous btn" aria-label="previous image">
+                        <img class="chevron" draggable="false"
+                        src="../assets/icons/chevron-left.svg"
+                        alt="">
+                    </button>
+
+                    <button class="next btn" aria-label="next image">
+                        <img class="chevron" draggable="false" 
+                        src="../assets/icons/chevron-right.svg"
+                        alt="">
+                    </button>
                 </div>
             </div>
             
