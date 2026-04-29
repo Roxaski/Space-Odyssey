@@ -324,6 +324,7 @@ nav.active .hamburger-menu .bars::after {
 @media (prefers-reduced-motion: reduce) {
     nav.active .links,
     .links,
+    .links ul li a::before,
     .bars::before,
     .bars::after {
         transition: none;
