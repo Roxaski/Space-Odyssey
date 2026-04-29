@@ -105,7 +105,7 @@ nav.active .hamburger-menu .bars::after {
     -webkit-tap-highlight-color: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
 .bars {
     position: relative;
@@ -466,7 +466,7 @@ nav.active .hamburger-menu .bars::after {
         width: 100%;
         background-color: var(--darkNavy);
         transform: translateY(-100%);
-        transition: transform 300ms;
+        transition: transform 300ms, visibility 0s 300ms;
         visibility: hidden;
         overflow-y: auto;
         z-index: 1;
@@ -869,5 +869,23 @@ nav.active .hamburger-menu .bars::after {
 @media screen and (orientation: landscape) and (max-width: 935px) {
     .links ul li {
         padding: 1.1rem;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    nav.active .links,
+    .links,
+    .bars::before,
+    .bars::after {
+        transition: none;
+    }
+    .mercury,
+    .venus,
+    .earth,
+    .mars,
+    .jupiter,
+    .saturn,
+    .uranus,
+    .neptune {
+        animation-play-state: paused;
     }
 }

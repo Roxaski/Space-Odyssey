@@ -156,7 +156,7 @@ nav.active .hamburger-menu .bars::after {
         width: 100%;
         background-color: var(--darkNavy);
         transform: translateY(-100%);
-        transition: transform 300ms;
+        transition: transform 300ms, visibility 0s 300ms;
         visibility: hidden;
         overflow-y: auto;
         z-index: 1;
@@ -201,5 +201,13 @@ nav.active .hamburger-menu .bars::after {
 @media screen and (orientation: landscape) and (max-width: 950px) {
     .title {
         margin: 75px auto;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    nav.active .links,
+    .links,
+    .bars::before,
+    .bars::after {
+        transition: none;
     }
 }
