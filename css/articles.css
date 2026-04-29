@@ -123,7 +123,7 @@ nav.active .hamburger-menu .bars::after {
 article {
     color: var(--white);
 }
-article h2 {
+article h1 {
     text-align: center;
     margin: 70px auto 40px;
     text-transform: uppercase;
