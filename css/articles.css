@@ -44,10 +44,10 @@ body {
     max-width: 90rem;
     padding-bottom: 2rem;
 }
-nav.active .hamburger-menu .bars::before {
+nav.menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
 }
-nav.active .hamburger-menu .bars::after {
+nav.menu-open .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
 .links {
@@ -160,7 +160,7 @@ article .img-container {
         position: fixed;
         overflow-y: hidden;
     }
-    nav.active .links {
+    nav.menu-open .links {
         transform: translate(0);
         visibility: visible;
         transition: transform 350ms ease, visibility 0s;
@@ -210,7 +210,7 @@ article .img-container {
     }
 }
 @media (prefers-reduced-motion: reduce) {
-    nav.active .links,
+    nav.menu-open .links,
     .links,
     .links ul li a::before,
     .bars::before,
