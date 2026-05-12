@@ -44,10 +44,10 @@ body {
     max-width: 90rem;
     padding-bottom: 2rem;
 }
-nav.active .hamburger-menu .bars::before {
+nav.menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
 }
-nav.active .hamburger-menu .bars::after {
+nav.menu-open .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
 .links {
@@ -127,7 +127,7 @@ nav.active .hamburger-menu .bars::after {
     padding: 1.25rem;
     transition: opacity 100ms ease-out;
 }
-.gallery.active {
+.gallery.menu-open {
     opacity: 0;
 }
 .gallery h1 {
@@ -235,12 +235,20 @@ nav.active .hamburger-menu .bars::after {
     opacity: 1;
     pointer-events: auto;
 }
+@media screen and (max-width: 1150px) {
+    .lightbox > img {
+        margin: 0 auto;
+    }
+    .lightbox .btn {
+        display: none;
+    }
+}
 @media screen and (max-width: 1135px) {
     .no-scroll {
         position: fixed;
         overflow-y: hidden;
     }
-    nav.active .links {
+    nav.menu-open .links {
         transform: translate(0);
         visibility: visible;
         transition: transform 350ms ease, visibility 0s;
@@ -274,14 +282,6 @@ nav.active .hamburger-menu .bars::after {
     }
     .hamburger-menu {
         display: flex;
-    }
-}
-@media screen and (max-width: 1060px) {
-    .lightbox > img {
-        margin: 0 auto;
-    }
-    .lightbox .btn {
-        display: none;
     }
 }
 @media screen and (max-width: 865px) {
@@ -322,7 +322,7 @@ nav.active .hamburger-menu .bars::after {
     }
 }
 @media (prefers-reduced-motion: reduce) {
-    nav.active .links,
+    nav.menu-open .links,
     .links,
     .links ul li a::before,
     .bars::before,
