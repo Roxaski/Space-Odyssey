@@ -17,16 +17,6 @@
     --grey: #bab6b6;
     --offWhite: #e8e5e5;
 }
-::-webkit-scrollbar {
-    width: .5rem;
-}
-::-webkit-scrollbar-track {
-    background: var(--darkNavy);
-}
-::-webkit-scrollbar-thumb {
-    background-color: var(--offWhite);
-    border-radius: 15px;
-}
 a:focus {
     outline: var(--white) 2px solid;
 }
