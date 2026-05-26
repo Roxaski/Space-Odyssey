@@ -5,24 +5,29 @@ const main = document.querySelector('main');
 
 menu.addEventListener('click', toggleHamburgerMenu);
 
-// toggles the hamburger menu, along with disabling scroll when menu is open
 function toggleHamburgerMenu() {
-    const menuOpen = nav.classList.contains('menu-open');
-
+    // toggles the hamburger menu variable to open / closed and enables / disables page scrolling accordingly
     nav.classList.toggle('menu-open');
     document.body.classList.toggle('no-scroll');
+
+    // the variable gets updated after it's toggled
+    const menuOpen = nav.classList.contains('menu-open');
     
     // if the these elements exists, it prevents them from being focused
     if (main) {
         main.inert = menuOpen;
     };
 
-    // adds or removes the esc key event listener when the hamburger menu is open or closed
+    /*
+        adds or removes the esc key event listener when the hamburger menu is open or closed,
+        along with adding blur to when hamburger menu opens to prevent focus outline, then restores focus when it's closed
+    */
     if (menuOpen) {
-        document.addEventListener('keydown', escapeKeyPress);
-    } else {
         document.removeEventListener('keydown', escapeKeyPress);
         menu.focus();
+    } else {
+        document.addEventListener('keydown', escapeKeyPress);
+        menu.blur();
     };
 };
 

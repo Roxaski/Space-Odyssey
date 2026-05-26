@@ -27,12 +27,6 @@
     --uranus: #b6d2ef;
     --neptune: #0072a8;
 }
-a:focus {
-    outline: var(--white) 2px solid;
-}
-a:focus:not(:focus-visible) {
-    outline: none;
-}
 body {
     width: 100%;
     max-width: 90rem;
@@ -94,9 +88,6 @@ nav.menu-open .hamburger-menu .bars::after {
     border: none;
     cursor: pointer;
     z-index: 2;
-}
-.hamburger-menu:focus:not(:focus-visible) {
-    outline: none;
 }
 .bars {
     position: relative;
