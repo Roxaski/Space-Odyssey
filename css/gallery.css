@@ -25,14 +25,12 @@ a:focus:not(:focus-visible) {
 }
 body {
     width: 100%;
+    max-width: 90rem;
     height: 100vh;
     background-color: var(--darkNavy);
     font-family: 'Montserrat', sans-serif;
-    cursor: default;
-}
-.wrapper {
-    max-width: 90rem;
     padding-bottom: 2rem;
+    cursor: default;
 }
 nav.menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
@@ -86,6 +84,9 @@ nav.menu-open .hamburger-menu .bars::after {
     border: none;
     cursor: pointer;
     z-index: 2;
+}
+.hamburger-menu:focus:not(:focus-visible) {
+    outline: none;
 }
 .bars {
     position: relative;
