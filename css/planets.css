@@ -89,6 +89,9 @@ nav.menu-open .hamburger-menu .bars::after {
     cursor: pointer;
     z-index: 2;
 }
+.hamburger-menu:focus:not(:focus-visible) {
+    outline: none;
+}
 .bars {
     position: relative;
     height: 3px;

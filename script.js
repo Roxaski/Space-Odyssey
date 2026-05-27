@@ -18,16 +18,11 @@ function toggleHamburgerMenu() {
         main.inert = menuOpen;
     };
 
-    /*
-        adds or removes the esc key event listener when the hamburger menu is open or closed,
-        along with adding blur to when hamburger menu opens to prevent focus outline, then restores focus when it's closed
-    */
+    // adds or removes the esc key event listener when the hamburger menu is open or closed
     if (menuOpen) {
         document.removeEventListener('keydown', escapeKeyPress);
-        menu.focus();
     } else {
         document.addEventListener('keydown', escapeKeyPress);
-        menu.blur();
     };
 };
 
