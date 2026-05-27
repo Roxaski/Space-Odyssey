@@ -22,6 +22,7 @@ body {
     max-width: 90rem;
     height: 100vh;
     background-color: var(--darkNavy);
+    scrollbar-gutter: stable;
     font-family: 'Montserrat', sans-serif;
     padding-bottom: 2rem;
     cursor: default;
