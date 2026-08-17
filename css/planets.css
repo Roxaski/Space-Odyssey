@@ -79,10 +79,10 @@ nav.menu-open .hamburger-menu .bars::after {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: .75rem;
-    left: 1rem;
-    height: 2rem;
-    width: 1.25rem;
+    top: .5rem;
+    left: .5rem;
+    height: 2.75rem;
+    width: 2.75rem;
     background-color: transparent;
     -webkit-tap-highlight-color: transparent;
     border: none;
@@ -95,7 +95,7 @@ nav.menu-open .hamburger-menu .bars::after {
 .bars {
     position: relative;
     height: 3px;
-    width: 100%;
+    width: 1.25rem;
     border-radius: 5px;
     background-color: transparent;
 }
@@ -103,8 +103,8 @@ nav.menu-open .hamburger-menu .bars::after {
 .bars::after {
     content: '';
     position: absolute;
-    width: 100%;
     height: 70%;
+    width: 100%;
     border-radius: 5px;
     background-color: var(--white);
     transition: transform 350ms ease;
