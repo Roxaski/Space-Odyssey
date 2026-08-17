@@ -107,6 +107,7 @@ nav.menu-open .hamburger-menu .bars::after {
 }
 article {
     color: var(--white);
+    padding: .75rem;
 }
 article h1 {
     text-align: center;
@@ -133,11 +134,12 @@ article .img-container {
     margin: 0 auto;
     width: 100%;
     height: auto;
-    padding: 0 1.1rem;
+    padding: 0 1rem;
 }
 .img-container img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     border: var(--grey) solid 1.5px;
 }
 @media screen and (max-width: 1135px) {
@@ -181,7 +183,7 @@ article .img-container {
         display: flex;
     }
     article p {
-        padding: 1rem 1.5rem 0 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 @media screen and (max-width: 865px) {
