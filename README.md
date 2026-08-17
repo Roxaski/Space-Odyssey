@@ -1,4 +1,6 @@
-<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/2571579f-1949-4329-8ed4-3848adaed0fc" />
+![Space Odyssey](https://github.com/user-attachments/assets/bdee0845-a289-4119-b348-0b009e39b68f#gh-light-mode-only)
+![Space Odyssey](https://github.com/user-attachments/assets/03cc121d-c616-4dbb-beca-a442c091acdd#gh-dark-mode-only)
+
 
 ## Welcome to Space Odyssey
 
