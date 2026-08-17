@@ -26,9 +26,6 @@ body {
     padding-bottom: 2rem;
     cursor: default;
 }
-nav {
-    position: relative;
-}
 nav.menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
 }
