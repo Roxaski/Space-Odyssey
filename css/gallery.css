@@ -20,6 +20,7 @@
 body {
     width: 100%;
     max-width: 90rem;
+    margin: 0 auto;
     height: 100vh;
     background-color: var(--darkNavy);
     scrollbar-gutter: stable;
@@ -54,10 +55,10 @@ nav.menu-open .hamburger-menu .bars::after {
 .links ul li a::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -.313rem;
     left: 50%;
     width: 0;
-    height: 1px;
+    height: .063rem;
     background-color: var(--white);
     transition: width 350ms ease, left 350ms ease;
 }
@@ -85,7 +86,7 @@ nav.menu-open .hamburger-menu .bars::after {
 }
 .bars {
     position: relative;
-    height: 3px;
+    height: .188rem;
     width: 1.25rem;
     border-radius: 5px;
     background-color: transparent;
@@ -101,10 +102,10 @@ nav.menu-open .hamburger-menu .bars::after {
     transition: transform 350ms ease;
 }
 .bars::before {
-    transform: translateY(-4px);
+    transform: translateY(-.25rem);
 }
 .bars::after {
-    transform: translateY(4px);
+    transform: translateY(.25rem);
 }
 .gallery {
     display: grid;
@@ -120,7 +121,7 @@ nav.menu-open .hamburger-menu .bars::after {
     text-align: center;
     text-transform: uppercase;
     font-size: clamp(1.1rem, 3vw, 1.5rem);
-    margin: 45px auto;
+    margin: 2.8rem auto;
     font-weight: 400;
     letter-spacing: 3px;
     color: var(--white);
@@ -146,6 +147,7 @@ nav.menu-open .hamburger-menu .bars::after {
     width: 100%;
     height: auto;
     color: var(--white);
+    aspect-ratio: 16 / 9;
     border: solid 2px var(--grey);
     contain: layout;
     cursor: pointer;
