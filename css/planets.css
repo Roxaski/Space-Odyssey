@@ -14,7 +14,6 @@
 :root {
     --darkNavy: #090917;
     --white: #ebe4e4;
-    --offWhite: #e8e5e5;
     --black: #000007;
     --orbit: #434044;
     --sun: #cc6723;
@@ -314,17 +313,23 @@ nav.menu-open .hamburger-menu .bars::after {
         transform: rotate(360deg) translate(14.063rem);
     }
 }
-.title h1 {
+.title h1,
+.title h2 {
     text-align: center;
+    color: var(--white);
     font-size: clamp(1.1rem, 3vw, 1.5rem);
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 4px;
     padding: .25rem;
     width: 100%;
+}
+.title h1 {
     line-height: 1.8;
     margin: 1.875rem auto 0;
-    color: var(--white);
+}
+.title h2 {
+    font-size: clamp(1.1rem, 3vw, 1.25rem);
 }
 .planetary-cards {
     display: grid;
@@ -338,7 +343,7 @@ nav.menu-open .hamburger-menu .bars::after {
     position: relative;
     width: 100%;
     height: 100%;
-    padding: .5rem;
+    padding: .65rem;
 }
 .card {
     margin: 0 auto;
@@ -419,18 +424,29 @@ nav.menu-open .hamburger-menu .bars::after {
     letter-spacing: .75px;
     aspect-ratio: 16 / 9;
 }
-.card h2 {
+.card h3 {
+    position: relative;
     text-align: center;
     text-transform: capitalize;
     color: var(--white);
     font-size: clamp(1.2rem, 3vw, 1.4rem);
     letter-spacing: 1px;
     font-weight: 400;
-    margin: .5rem auto;
+    margin-bottom: 1rem;
+}
+.card h3::after {
+    content: '';
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    width: 95%;
+    height: 1.9px;
+    transform: translate(-50%, -50%);
+    background: var(--orbit);
 }
 .card p {
     padding: .25rem;
-    margin: 0 auto;
+    margin: 1.25rem auto 0;
 }
 @media screen and (max-width: 1135px) {
     .no-scroll {
@@ -493,6 +509,23 @@ nav.menu-open .hamburger-menu .bars::after {
     }
     .card {
         width: 100%;
+    }
+}
+@media screen and (max-width: 710px) {
+    .title h2 {
+        width: 50%;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+}
+@media screen and (max-width: 610px) {
+    .title h2 {
+        width: 75%;
+    }
+    .planetary-cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        margin: 1.875rem auto 0;
     }
 }
 @media screen and (max-width: 575px) {
@@ -607,14 +640,6 @@ nav.menu-open .hamburger-menu .bars::after {
             transform: rotate(360deg) translate(10.813rem);
         }
     }
-    .planetary-cards {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
-    }
-    .card {
-        margin: 0 auto;
-        max-width: 21.875rem;
-    }
 }
 @media screen and (max-width: 450px) {
     .solar-system {
@@ -623,18 +648,12 @@ nav.menu-open .hamburger-menu .bars::after {
         transform-origin: center;
     }
     .planetary-cards {
-        margin: 3.125rem;
-        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
     }
 }
-@media screen and (max-width: 405px) {
-    .planetary-cards {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
-        margin: 1.875rem auto 0;
-    }
-    .card {
-        margin: 0 auto;
+@media screen and (max-width: 395px) {
+    .title h2 {
         width: 85%;
     }
 }
