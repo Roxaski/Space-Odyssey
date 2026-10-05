@@ -14,6 +14,8 @@
 :root {
     --darkNavy: #090917;
     --white: #ebe4e4;
+    --brightWhite: #e1e1e1;
+    --lightGrey: #b2b2b2;
     --black: #000007;
     --orbit: #434044;
     --sun: #cc6723;
@@ -353,7 +355,8 @@ nav.menu-open .hamburger-menu .bars::after {
     color: var(--white);
     background: var(--black);
     border: var(--orbit) 2px solid;
-    transition: box-shadow 250ms ease-in-out, border-color 250ms ease-in-out;
+    transition: box-shadow 250ms ease-in-out, 
+                border-color 250ms ease-in-out;
 }
 .card:nth-child(1):hover {
     border: var(--mercury) 2px solid;
@@ -424,25 +427,61 @@ nav.menu-open .hamburger-menu .bars::after {
     letter-spacing: .75px;
     aspect-ratio: 16 / 9;
 }
-.card h3 {
+.card .title {
     position: relative;
     text-align: center;
-    text-transform: capitalize;
-    color: var(--white);
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin-bottom: 1rem;
 }
-.card h3::after {
+.card .title::after {
     content: '';
     position: absolute;
-    top: 125%;
+    top: 110%;
     left: 50%;
-    width: 95%;
-    height: 1.9px;
     transform: translate(-50%, -50%);
     background: var(--orbit);
+    width: 90%;
+    height: 1.25px;
+    transition: background-color 250ms ease-in-out;
+}
+.card:nth-child(1):hover .title::after{
+    background: var(--mercury);
+}
+.card:nth-child(2):hover .title::after{
+    background: var(--venus);
+}
+.card:nth-child(3):hover .title::after{
+    background: var(--earth);
+}
+.card:nth-child(4):hover .title::after{
+    background: var(--mars);
+}
+.card:nth-child(5):hover .title::after{
+    background: var(--sun);
+}
+.card:nth-child(6):hover .title::after{
+    background: var(--jupiter);
+}
+.card:nth-child(7):hover .title::after{
+    background: var(--saturn);
+}
+.card:nth-child(8):hover .title::after{
+    background: var(--uranus);
+}
+.card:nth-child(9):hover .title::after{
+    background: var(--neptune);
+}
+.card .title h3 {
+    color: var(--brightWhite);
+    text-transform: capitalize;
+    font-size: clamp(1.2rem, 3vw, 1.35rem);
+    letter-spacing: 1.5px;
+    margin-top: .5rem;
+    font-weight: 500;
+}
+.card .title h4 {
+    font-size: clamp(.95rem, 3vw, 1rem);
+    color: var(--lightGrey);
+    letter-spacing: .5px;
+    font-weight: 400;
 }
 .card p {
     padding: .25rem;
@@ -499,6 +538,17 @@ nav.menu-open .hamburger-menu .bars::after {
     .card:nth-child(9):hover {
         border: var(--orbit) solid 2px;
         box-shadow: none;
+    }
+    .card:nth-child(1):hover .title::after,
+    .card:nth-child(2):hover .title::after,
+    .card:nth-child(3):hover .title::after,
+    .card:nth-child(4):hover .title::after,
+    .card:nth-child(5):hover .title::after,
+    .card:nth-child(6):hover .title::after,
+    .card:nth-child(7):hover .title::after,
+    .card:nth-child(8):hover .title::after,
+    .card:nth-child(9):hover .title::after {
+        background: var(--orbit);
     }
 }
 @media screen and (max-width: 1057px) {
