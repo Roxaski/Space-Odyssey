@@ -149,6 +149,7 @@ nav.menu-open .hamburger-menu .bars::after {
     color: var(--white);
     aspect-ratio: 16 / 9;
     border: solid 2px var(--grey);
+    object-fit: contain;
     contain: layout;
     cursor: pointer;
 }
@@ -162,6 +163,7 @@ nav.menu-open .hamburger-menu .bars::after {
     transform: translate(-50%, -50%);
     width: fit-content;
     height: auto;
+    aspect-ratio: 16 / 9;
     z-index: 3;
 }
 .lightbox-no-scroll {
@@ -174,10 +176,19 @@ nav.menu-open .hamburger-menu .bars::after {
     width: auto;
     height: auto;
     object-fit: contain;
+    user-select: none;
+    aspect-ratio: 16 / 9;
+    transition: transform 300ms ease-in-out;
     cursor: default;
 }
 .lightbox > img.active {
     display: block;
+}
+.lightbox > img.zoom {
+    transform: scale(2);
+}
+.lightbox > img.drag {
+    transition: none;
 }
 .lightbox .btn {
     position: absolute;
@@ -223,12 +234,19 @@ nav.menu-open .hamburger-menu .bars::after {
     opacity: 1;
     pointer-events: auto;
 }
+@media (hover: hover) {
+    .lightbox > img.zoom {
+        transform: scale(1.25);
+    }
+}
+@media (hover: none) {
+    .lightbox .btn {
+        display: none;
+    }
+}
 @media screen and (max-width: 1150px) {
     .lightbox > img {
         margin: 0 auto;
-    }
-    .lightbox .btn {
-        display: none;
     }
 }
 @media screen and (max-width: 1135px) {
@@ -299,9 +317,6 @@ nav.menu-open .hamburger-menu .bars::after {
         transform: translate(-50%, -50%);
         width: 80vw;
         height: auto;
-    }
-    .lightbox .btn {
-        display: none;
     }
 }
 @media screen and (orientation: landscape) and (max-width: 935px) {
