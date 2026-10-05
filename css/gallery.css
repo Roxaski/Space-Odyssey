@@ -246,11 +246,6 @@ nav.menu-open .hamburger-menu .bars::after {
         display: none;
     }
 }
-@media screen and (max-width: 1150px) {
-    .lightbox > img {
-        margin: 0 auto;
-    }
-}
 @media screen and (max-width: 1135px) {
     .no-scroll {
         position: fixed;
