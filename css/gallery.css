@@ -329,4 +329,7 @@ nav.menu-open .hamburger-menu .bars::after {
     .gallery-overlay {
         transition: none;
     }
+    .gallery-overlay.active {
+        transition: none;
+    }
 }

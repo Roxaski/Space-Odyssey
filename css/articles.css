@@ -304,4 +304,13 @@ article .img-container {
     .bars::after {
         transition: none;
     }
+    .lightbox > img {
+        transition: none;
+    }
+    .article-overlay {
+        transition: none;
+    }
+    .article-overlay.active {
+        transition: none;
+    }
 }
