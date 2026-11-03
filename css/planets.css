@@ -32,7 +32,8 @@ body {
     width: 100%;
     max-width: 90rem;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 1.5rem;
     background-color: var(--darkNavy);
     font-family: 'Montserrat', sans-serif;
     cursor: default;
@@ -338,7 +339,6 @@ nav.menu-open .hamburger-menu .bars::after {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin: 3.125rem auto 0;
-    padding-bottom: 2rem;
     max-width: 62.5rem;
 }
 .card-contents {
@@ -516,7 +516,7 @@ nav.menu-open .hamburger-menu .bars::after {
     .links ul li {
         display: flex;
         flex-direction: column;
-        padding: 1.75rem;
+        margin: 1.5rem 0;
     }
     .links ul li a {
         color: var(--white);
@@ -920,11 +920,6 @@ nav.menu-open .hamburger-menu .bars::after {
         100% {
             transform: rotate(360deg) translate(9.313rem);
         }
-    }
-}
-@media screen and (orientation: landscape) and (max-width: 935px) {
-    .links ul li {
-        padding: 1.1rem;
     }
 }
 @media (prefers-reduced-motion: reduce) {
