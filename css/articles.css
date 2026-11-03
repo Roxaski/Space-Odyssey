@@ -13,6 +13,7 @@
 }
 :root {
     --darkNavy: #090917;
+    --black: #232323;
     --white: #ebe4e4;
     --grey: #bab6b6;
     --offWhite: #e8e5e5;
@@ -21,10 +22,10 @@ body {
     width: 100%;
     max-width: 90rem;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--darkNavy);
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     cursor: default;
 }
 nav.menu-open .hamburger-menu .bars::before {
@@ -71,7 +72,7 @@ nav.menu-open .hamburger-menu .bars::after {
     justify-content: center;
     position: absolute;
     top: .5rem;
-    left: .5rem;
+    left: 0;
     height: 2.75rem;
     width: 2.75rem;
     background-color: transparent;
@@ -108,7 +109,7 @@ nav.menu-open .hamburger-menu .bars::after {
 }
 article {
     color: var(--white);
-    padding: .75rem;
+    padding: 0 1rem;
 }
 article h1 {
     text-align: center;
@@ -120,13 +121,16 @@ article h1 {
 }
 article p {
     margin: .625rem auto;
-    padding: 1rem 1rem 0 1rem;
     line-height: 1.8;
 }
 article .research-list ul {
     list-style: disc;
-    margin-left: 2rem;
+    margin: 2rem 1rem;
+}
+article .research-list ul li {
+    margin: 2.5rem 0;
     line-height: 2;
+    text-transform: capitalize;
 }
 article .img-container {
     display: grid;
@@ -135,13 +139,98 @@ article .img-container {
     margin: 0 auto;
     width: 100%;
     height: auto;
-    padding: 0 1rem;
 }
 .img-container img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
     border: var(--grey) solid 1.5px;
+    cursor: pointer;
+}
+.lightbox-no-scroll {
+    overflow: hidden;
+    pointer-events: auto;
+}
+.lightbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+    height: 85vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    touch-action: none;
+    pointer-events: none;
+    z-index: 7;
+}
+.lightbox > img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: auto;
+    transition: transform 300ms ease-in-out;
+    cursor: default;
+}
+.lightbox > img.active {
+    display: block;
+}
+.lightbox > img.zoom {
+    transform: scale(2);
+}
+.lightbox > img.drag {
+    transition: none;
+}
+.lightbox .btn {
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    visibility: hidden;
+    pointer-events: none;
+}
+.lightbox .btn.active {
+    visibility: visible;
+    pointer-events: auto;
+}
+.lightbox .btn .chevron {
+    width: 5rem;
+    height: auto;
+}
+.lightbox .previous {
+    left: -6rem;
+    transform: translateY(-50%);
+}
+.lightbox .next {
+    right: -6rem;
+    transform: translateY(-50%);
+}
+.article-overlay {
+    opacity: 0;
+    position: fixed;
+    pointer-events: none;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    background: var(--black);
+    z-index: 5;
+}
+.article-overlay.active {
+    opacity: .85;
+    pointer-events: auto;
+    transition: opacity 150ms ease;
+}
+@media (hover: hover) {
+    .lightbox > img.zoom {
+        transform: scale(1.25);
+    }
 }
 @media screen and (max-width: 1135px) {
     .no-scroll {
@@ -172,7 +261,7 @@ article .img-container {
     .links ul li {
         display: flex;
         flex-direction: column;
-        padding: 1.75rem;
+        margin: 1.5rem 0;
     }
     .links ul li a {
         color: var(--white);
@@ -186,6 +275,10 @@ article .img-container {
     article p {
         margin-bottom: 1.5rem;
     }
+    .lightbox {
+        width: calc(100vw - 2rem);
+        height: auto;
+    }
 }
 @media screen and (max-width: 865px) {
     article .img-container {
@@ -193,8 +286,14 @@ article .img-container {
     }
 }
 @media screen and (orientation: landscape) and (max-width: 935px) {
-    .links ul li {
-        padding: 1.1rem;
+    .lightbox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(95dvh * 16 / 9);
+        max-width: calc(100vw - 2rem);
+        height: auto;
     }
 }
 @media (prefers-reduced-motion: reduce) {
