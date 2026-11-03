@@ -26,6 +26,7 @@
     <link rel="manifest" href="../site.webmanifest">
     <link rel="stylesheet" href="../css/articles.css">
     <script defer src="../script.js"></script>
+    <script defer src="../scripts/articles.js"></script>
 </head>
 
 <body>
@@ -58,7 +59,7 @@
             <p>In 1989 the Hipparcos satellite was launched, it's mission was to map out the stars, it managed to create an archive of almost 120 thousand stars.</p>
 
             <div class="img-container">
-                <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                <img tabindex="0" fetchpriority="high" width="1920" height="1080" draggable="false" 
                 src="../assets/article/satellite_extra_large.webp"
                 srcset="../assets/article/satellite_small.webp 480w,
                         ../assets/article/satellite_medium.webp 800w,
@@ -68,7 +69,7 @@
                         50vw"
                 alt="the international space station">
 
-                <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                <img tabindex="0" fetchpriority="high" width="1920" height="1080" draggable="false" 
                 src="../assets/article/astronauts_extra_large.webp" 
                 srcset="../assets/article/astronauts_small.webp 480w,
                         ../assets/article/astronauts_medium.webp 800w,
@@ -88,7 +89,7 @@
             <p>Now an organisation that was established prior to the ESA was that of NASA ( National Aeronautics and Space Administration ) which was originally known as the NACA ( National Advisory Committee for Aeronautics ) and was established in the 1946, where they started of experimenting with a variety of different aeronautics, some of which were rocket powered aeroplanes.</p>
 
             <div class="img-container">
-                <img loading="lazy" width="1920" height="1080" draggable="false" 
+                <img tabindex="0" loading="lazy" width="1920" height="1080" draggable="false" 
                 src="../assets/article/astronaut_satellite_extra_large.webp"
                 srcset="../assets/article/astronaut_satellite_small.webp 480w,
                         ../assets/article/astronaut_satellite_medium.webp 800w,
@@ -98,7 +99,7 @@
                         50vw"
                 alt="close-up of an astronaut next to a satellite">
 
-                <img loading="lazy" width="1920" height="1080" draggable="false" 
+                <img tabindex="0" loading="lazy" width="1920" height="1080" draggable="false" 
                 src="../assets/article/earth_satellite_extra_large.webp" 
                 srcset="../assets/article/earth_satellite_small.webp 480w,
                         ../assets/article/earth_satellite_medium.webp 800w,
@@ -116,7 +117,7 @@
             <p>Following on from Project Mercury's success was born the desire to push boundaries, and from that desire Project Apollo was born. This was indeed where the ever infamous quote stemmed from - 'A small step for man, and a giant leap for mankind' which was said by none other than Neil Armstrong, the first ever human being to have stepped foot on the moons surface following the Apollo 13 mission. This marked a  herculean achievement for everyone involved and a monumental moment in human history.</p>
 
             <div class="img-container">
-                <img loading="lazy" width="1920" height="1080" draggable="false" 
+                <img tabindex="0" loading="lazy" width="1920" height="1080" draggable="false" 
                 src="../assets/article/moon_surface_extra_large.webp" 
                 srcset="../assets/article/moon_surface_small.webp 480w,
                         ../assets/article/moon_surface_medium.webp 800w,
@@ -126,7 +127,7 @@
                         50vw"
                 alt="image of the moons surface taken by NASA">
 
-                <img loading="lazy" width="1920" height="1080" draggable="false" 
+                <img tabindex="0" loading="lazy" width="1920" height="1080" draggable="false" 
                 src="../assets/article/moon_rover_extra_large.webp"
                 srcset="../assets/article/moon_rover_large.webp 480w,
                         ../assets/article/moon_rover_medium.webp 800w,
@@ -143,5 +144,26 @@
 
             <p>The Apollo Missions lasted from 1967 to 1972, and were manned by many incredibly talented astronauts, unfortunately not every Apollo mission was a success, and some were even catastrophic making NASA review the way did they things. Since then NASA has since cancelled a handful of Apollo Mission attempts, but who's to say that they won't bring back Apollo, and the new heights humanity might be able to reach.</p>
         </article>
+
+        <div class="lightbox">
+            <img draggable="false"
+            sizes="(max-width: 1135px) calc(100vw - 2rem),
+                   65vw"
+            alt="">
+            
+            <button class="previous btn" aria-label="previous image">
+                <img width="48" height="48" class="chevron" draggable="false"
+                src="../assets/icons/chevron-left.svg"
+                alt="">
+            </button>
+
+            <button class="next btn" aria-label="next image">
+                <img width="48" height="48" class="chevron" draggable="false" 
+                src="../assets/icons/chevron-right.svg"
+                alt="">
+            </button>
+        </div>
+
+        <div class="article-overlay"></div>
     </main>
 </body>

@@ -26,6 +26,7 @@
     <link rel="manifest" href="../site.webmanifest">
     <link rel="stylesheet" href="../css/articles.css">
     <script defer src="../script.js"></script>
+    <script defer src="../scripts/articles.js"></script>
 </head>
 <body>
     <header>
@@ -58,10 +59,9 @@
 
             <div class="research-list">
                 <ul>
-                    <li>biotechnology</li>
-                    <li>scientific data</li>
-                    <li>system & technology</li>
-                    <li>physicality</li>
+                    <li>biotechnology | Protein Crystal Growth, 3D Bioprinting, Tissue Engineering.</li>
+                    <li>scientific data | Astrophysics, Materials Science, In-Space Manufacturing.</li>
+                    <li>system & technology | Power & Propulsion, Flight Control, Robotics</li>
                 </ul>
             </div>
 
@@ -72,7 +72,7 @@
             <p>The station is also home to seven astronauts, this has slowly increased from the initial three which then doubled to six, and now an extra one is able to live aboard the ISS, in the future they may be even more who can live aboard the space station to help conduct it's various aspects of studies and testing. Laboratories also make up a large portion of the ISS, these have proven to be incredibly valuable for all the research that is conducted around the clock.</p>
 
             <div class="img-container">
-                <img width="1920" height="1080" fetchpriority="high" draggable="false"
+                <img tabindex="0" width="1920" height="1080" fetchpriority="high" draggable="false"
                 src="../assets/article/scientist_space_extra_large.webp"
                 srcset="../assets/article/scientist_space_small.webp 480w,
                         ../assets/article/scientist_space_medium.webp 800w,
@@ -82,7 +82,7 @@
                         50vw"
                 alt="nasa scientist aboard the international space station">
 
-                <img width="1920" height="1080" fetchpriority="high" draggable="false"
+                <img tabindex="0" width="1920" height="1080" fetchpriority="high" draggable="false"
                 src="../assets/article/international_space_station_extra_large.webp"
                 srcset="../assets/article/international_space_station_small.webp 480w,
                         ../assets/article/international_space_station_medium.webp 800w,
@@ -103,5 +103,26 @@
 
             <p>One final thing we will touch upon in this article is the very exciting prospect of further use of the moon by utilising 'human landers' along with reusable landing systems and more advanced capabilities for more systems to help in various aspects of exploration and scientific research, this of course is likely still a long ways out but the possibilities are truly impressive with what we could achieve in the coming years.</p>
         </article>
+
+        <div class="lightbox">
+            <img draggable="false" 
+            sizes="(max-width: 1135px) calc(100vw - 2rem),
+                   65vw"
+            alt="">
+            
+            <button class="previous btn" aria-label="previous image">
+                <img width="48" height="48" class="chevron" draggable="false"
+                src="../assets/icons/chevron-left.svg"
+                alt="">
+            </button>
+
+            <button class="next btn" aria-label="next image">
+                <img width="48" height="48" class="chevron" draggable="false" 
+                src="../assets/icons/chevron-right.svg"
+                alt="">
+            </button>
+        </div>
+
+        <div class="article-overlay"></div>
     </main>
 </body>
