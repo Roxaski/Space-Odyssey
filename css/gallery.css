@@ -21,11 +21,11 @@ body {
     width: 100%;
     max-width: 90rem;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--darkNavy);
     scrollbar-gutter: stable;
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     cursor: default;
 }
 nav.menu-open .hamburger-menu .bars::before {
@@ -72,7 +72,7 @@ nav.menu-open .hamburger-menu .bars::after {
     justify-content: center;
     position: absolute;
     top: .5rem;
-    left: .5rem;
+    left: 0;
     height: 2.75rem;
     width: 2.75rem;
     background-color: transparent;
@@ -111,8 +111,8 @@ nav.menu-open .hamburger-menu .bars::after {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: .8rem;
-    padding: 1.75rem;
     transition: opacity 100ms ease-out;
+    padding: 0 1rem;
 }
 .gallery.menu-open {
     opacity: 0;
@@ -121,7 +121,7 @@ nav.menu-open .hamburger-menu .bars::after {
     text-align: center;
     text-transform: uppercase;
     font-size: clamp(1.1rem, 3vw, 1.5rem);
-    margin: 2.8rem auto;
+    margin: 4.3rem auto 2.5rem;
     font-weight: 400;
     letter-spacing: 3px;
     color: var(--white);
@@ -269,7 +269,7 @@ nav.menu-open .hamburger-menu .bars::after {
     .links ul li {
         display: flex;
         flex-direction: column;
-        padding: 1.75rem;
+        margin: 1.5rem 0;
     }
     .links ul li a {
         color: var(--white);
@@ -313,11 +313,6 @@ nav.menu-open .hamburger-menu .bars::after {
         width: calc(95dvh * 16 / 9);
         max-width: calc(100vw - 1.5rem);
         height: auto;
-    }
-}
-@media screen and (orientation: landscape) and (max-width: 935px) {
-    .links ul li {
-        padding: 1.1rem;
     }
 }
 @media (prefers-reduced-motion: reduce) {
