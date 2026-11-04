@@ -128,7 +128,7 @@ article .research-list ul {
     margin: 2rem 1rem;
 }
 article .research-list ul li {
-    margin: 2.5rem 0;
+    margin: 3.5rem 1rem;
     line-height: 2;
     text-transform: capitalize;
 }
@@ -180,7 +180,7 @@ article .img-container {
     display: block;
 }
 .lightbox > img.zoom {
-    transform: scale(2);
+    transform: scale(1.5);
 }
 .lightbox > img.drag {
     transition: none;
